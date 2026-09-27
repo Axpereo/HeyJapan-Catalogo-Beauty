@@ -1,0 +1,698 @@
+/* ==========================================================================
+   HeyJapan · Catálogo Beauty
+   Hoja de estilos principal
+
+   Índice
+   1. Variables (colores, tipografía, espaciados)
+   2. Tema oscuro
+   3. Base
+   4. Página (contenedor general)
+   5. Encabezado y logo
+   6. Menú de categorías (pestañas / hamburguesa)
+   7. Secciones de categoría
+   8. Tarjeta de producto
+   9. Pie de página
+   10. Visor de imágenes (lightbox)
+   11. Responsive (tablet y móvil)
+   ========================================================================== */
+
+
+/* 1. VARIABLES
+   Modifique estos valores para ajustar colores y espaciados de todo el sitio.
+   -------------------------------------------------------------------------- */
+:root {
+  /* Colores */
+  --color-bg: #FAF7F6;            /* fondo de la página */
+  --color-surface: #FFFFFF;       /* fondo de tarjetas y menú */
+  --color-text: #2A2126;          /* texto principal */
+  --color-text-muted: #6F6268;    /* texto secundario */
+  --color-border: #E9DFE1;        /* bordes y líneas */
+  --color-accent: #FF0077;        /* color de marca / acentos */
+  --color-image-bg: #F1ECEC;      /* fondo detrás de las fotos */
+
+  /* Tipografías */
+  --font-display: "Zen Old Mincho", "Hiragino Mincho ProN", Georgia, serif;
+  --font-body: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Página */
+  --page-max-width: 1180px;       /* ancho máximo del contenido */
+  --page-gutter: 20px;            /* margen lateral de la página */
+  --page-padding-top: 40px;       /* espacio superior de la página */
+  --page-padding-bottom: 64px;    /* espacio inferior de la página */
+  --page-section-gap: 40px;       /* separación entre bloques (header, menú, categorías) */
+
+  /* Encabezado */
+  --header-gap: 12px;             /* separación entre logo, título y texto */
+  --logo-max-height: 72px;
+  --logo-max-width: 220px;
+
+  /* Categorías */
+  --category-gap: 18px;           /* separación entre título de categoría y grilla */
+  --grid-columns: 2;              /* tarjetas por fila en computador */
+  --grid-gap: 24px;               /* separación entre tarjetas */
+
+  /* Tarjetas */
+  --card-padding: 24px;           /* relleno interno del texto de la tarjeta */
+  --card-gap: 8px;                /* separación entre elementos dentro de la tarjeta */
+  --card-radius: 6px;             /* redondeo de esquinas */
+  --card-image-ratio: 4 / 5;      /* proporción de la foto (ancho / alto) */
+  --card-details-gap: 16px;       /* separación entre "Activo", "Uso" y "Premios" */
+
+  /* Visor de imágenes */
+  --lightbox-backdrop: rgba(20, 14, 17, 0.88);  /* fondo oscuro detrás de la imagen */
+  --lightbox-padding: 24px;       /* margen alrededor de la imagen ampliada */
+}
+
+
+/* 2. TEMA OSCURO
+   Se activa automáticamente si el dispositivo del visitante usa modo oscuro.
+   -------------------------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-bg: #1A1518;
+    --color-surface: #241D21;
+    --color-text: #F2EAED;
+    --color-text-muted: #B3A4AB;
+    --color-border: #3A3035;
+    --color-accent: #E8839F;
+    --color-image-bg: #2E262A;
+  }
+}
+
+
+/* 3. BASE
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+
+/* 4. PÁGINA
+   -------------------------------------------------------------------------- */
+.page {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding-inline: var(--page-gutter);
+  padding-top: var(--page-padding-top);
+  padding-bottom: var(--page-padding-bottom);
+  display: flex;
+  flex-direction: column;
+  gap: var(--page-section-gap);
+}
+
+
+/* 5. ENCABEZADO Y LOGO
+   -------------------------------------------------------------------------- */
+.page-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--header-gap);
+  max-width: 68ch;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+}
+
+.brand-logo__image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: var(--logo-max-height);
+  max-width: var(--logo-max-width);
+}
+
+/* Recuadro que se muestra mientras no exista src/logo.png */
+.brand-logo__placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 56px;
+  border: 1.5px dashed var(--color-border);
+  border-radius: var(--card-radius);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.page-header__kicker {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.page-header__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(40px, 7vw, 64px);
+  font-weight: 700;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+.page-header__title-jp {
+  margin-left: 0.3em;
+  font-size: 0.5em;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  vertical-align: middle;
+}
+
+.page-header__intro {
+  margin: 0;
+  font-size: 16px;
+  color: var(--color-text-muted);
+}
+
+
+/* 6. MENÚ DE CATEGORÍAS
+   En computador: pestañas. En móvil: botón hamburguesa desplegable (ver sección 10).
+   -------------------------------------------------------------------------- */
+.category-nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--color-bg);
+  padding-block: 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.margin-price {
+  margin-bottom: 12px !important;
+}
+
+/* Botón hamburguesa: oculto en computador */
+.category-nav__toggle {
+  display: none;
+}
+
+.category-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.category-nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+
+.category-nav__link:hover,
+.category-nav__link:focus-visible {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+.category-nav__count {
+  margin-left: 4px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+
+/* 7. SECCIONES DE CATEGORÍA
+   -------------------------------------------------------------------------- */
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: var(--category-gap);
+  scroll-margin-top: 64px;         /* evita que el menú fijo tape el título al navegar */
+}
+
+.category__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-text);
+}
+
+.category__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.category__meta {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.category__grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+
+/* 8. TARJETA DE PRODUCTO
+   -------------------------------------------------------------------------- */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--card-radius);
+}
+
+/* Foto */
+.product-card__media {
+  aspect-ratio: var(--card-image-ratio);
+  max-width: 100%;
+  overflow: hidden;
+  background: var(--color-image-bg);
+}
+
+/* Botón que envuelve la foto y abre el visor al hacer clic */
+.product-card__zoom {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+.product-card__zoom:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: -3px;
+}
+
+.product-card__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;               /* la foto llena el recuadro (puede recortar bordes) */
+  transition: transform 0.3s ease;
+}
+
+.product-card__zoom:hover .product-card__image {
+  transform: scale(1.03);
+}
+
+/* Etiqueta "Ampliar" que aparece al pasar el mouse */
+.product-card__zoom-hint {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(20, 14, 17, 0.72);
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.product-card__zoom:hover .product-card__zoom-hint,
+.product-card__zoom:focus-visible .product-card__zoom-hint {
+  opacity: 1;
+}
+
+/* Variante para fotos de producto sobre fondo blanco: se muestran completas */
+.product-card__media--contain {
+  background: #FFFFFF;
+}
+
+.product-card__media--contain .product-card__image {
+  object-fit: contain;
+  padding: 12px;
+}
+
+/* Texto */
+.product-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap);
+  padding: var(--card-padding);
+}
+
+.product-card__brand {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.product-card__origin {
+  color: var(--color-text-muted);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.product-card__name {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+.product-card__name-jp {
+  margin-top: 0px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* Precio */
+.product-card__price {
+  margin: 2px 0 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.product-card__price-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  padding-left: 12px;
+}
+
+.product-card__price-value {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  padding-right: 12px;
+}
+
+/* Datos: activo principal, uso, premios */
+.product-card__details {
+  margin: 4px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-details-gap);
+}
+
+.product-card__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.product-card__detail--awards {
+  padding-top: var(--card-details-gap);
+  border-top: 1px dashed var(--color-border);
+}
+
+.product-card__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #CF1F71;
+}
+
+.product-card__value {
+  margin: 0;
+  font-size: 14.5px;
+}
+
+.product-card__awards {
+  margin: 0;
+  padding-left: 1.1em;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13.5px;
+}
+
+.product-card__awards-item::marker {
+  color: var(--color-accent);
+}
+
+.product-card__awards-empty {
+  font-size: 13.5px;
+  color: var(--color-text-muted);
+}
+
+
+/* 9. PIE DE PÁGINA
+   -------------------------------------------------------------------------- */
+.page-footer {
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.page-footer__text {
+  margin: 0;
+}
+
+
+/* 10. VISOR DE IMÁGENES (LIGHTBOX)
+   -------------------------------------------------------------------------- */
+.lightbox {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: var(--lightbox-padding);
+  border: 0;
+  background: transparent;
+  color: #FFFFFF;
+}
+
+.lightbox::backdrop {
+  background: var(--lightbox-backdrop);
+}
+
+.lightbox[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.lightbox__image {
+  display: block;
+  max-width: min(100%, 1000px);
+  max-height: calc(100vh - (var(--lightbox-padding) * 2) - 48px);
+  width: auto;
+  height: auto;
+  border-radius: var(--card-radius);
+  background: #FFFFFF;
+}
+
+.lightbox__caption {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.lightbox__close {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  color: #FFFFFF;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox__close:hover {
+  background: rgba(255, 255, 255, 0.26);
+}
+
+.lightbox__close:focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 2px;
+}
+
+
+/* 11. RESPONSIVE (TABLET Y MÓVIL)
+   -------------------------------------------------------------------------- */
+
+/* Tablet: 2 tarjetas por fila */
+@media (max-width: 960px) {
+  :root {
+    --grid-columns: 2;
+  }
+}
+
+/* Móvil: menú hamburguesa */
+@media (max-width: 640px) {
+  /* Menú hamburguesa */
+  .category-nav__toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 14px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--card-radius);
+    color: var(--color-text);
+    font: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .category-nav__toggle:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  .category-nav__icon {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 18px;
+  }
+
+  .category-nav__icon-bar {
+    display: block;
+    height: 2px;
+    background: var(--color-text);
+    border-radius: 2px;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  /* Ícono se convierte en "X" cuando el menú está abierto */
+  .category-nav__toggle[aria-expanded="true"] .category-nav__icon-bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .category-nav__toggle[aria-expanded="true"] .category-nav__icon-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .category-nav__toggle[aria-expanded="true"] .category-nav__icon-bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .category-nav__list {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 8px;
+    overflow: hidden;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--card-radius);
+  }
+
+  .category-nav__list--open {
+    display: flex;
+  }
+
+  .category-nav__item + .category-nav__item {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .category-nav__link {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    font-size: 15px;
+  }
+}
+
+/* Móvil pequeño: 1 tarjeta por fila */
+@media (max-width: 560px) {
+  :root {
+    --grid-columns: 1;
+    --page-gutter: 16px;
+    --lightbox-padding: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .category-nav__icon-bar,
+  .product-card__image,
+  .product-card__zoom-hint {
+    transition: none;
+  }
+}

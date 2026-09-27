@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HeyJapan Beauty</title>
+  <meta name="description" content="Catálogo de productos de belleza de Japón y Korea de HeyJapan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="page">
+
+    <!-- ==================== ENCABEZADO ==================== -->
+    <header class="page-header">
+      <!-- LOGO: guarde su logo como src/logo.png (o cambie el src) -->
+      <div class="brand-logo">
+        <img class="brand-logo__image" id="brand-logo-image" src="src/logo.png" alt="HeyJapan">
+        <span class="brand-logo__placeholder" id="brand-logo-placeholder" hidden>Logo</span>
+      </div>
+      <p class="page-header__kicker">HeyJapan · Catálogo</p>
+      <h1 class="page-header__title">Beauty <span class="page-header__title-jp" lang="ja">美容</span></h1>
+      <p class="page-header__intro">Para solicitar la reserva contáctanos a través de un mensaje por Instagram indicandonos el nombre del producto que deseas. Todos los artículos corresponden a marcas originales importadas desde Japón hacia Chile. El valor incluye los gastos de envío internacional Japón - Chile y el envío nacional es por pagar. </p>
+      <h3 class="product-card__name">Si buscas otro producto que no esté en el listado ¡Escríbenos!</h3>
+      <a href="https://www.instagram.com/heyjapancl">Link a Instagram</a>
+  
+    </header>
+
+    <!-- ==================== MENÚ DE CATEGORÍAS ==================== -->
+    <nav class="category-nav" aria-label="Categorías">
+      <button class="category-nav__toggle" id="category-nav-toggle" type="button" aria-expanded="false" aria-controls="category-nav-list">
+        <span class="category-nav__icon" aria-hidden="true">
+          <span class="category-nav__icon-bar"></span>
+          <span class="category-nav__icon-bar"></span>
+          <span class="category-nav__icon-bar"></span>
+        </span>
+        Categorías
+      </button>
+      <ul class="category-nav__list" id="category-nav-list">
+        <li class="category-nav__item"><a class="category-nav__link" href="#facial">Cuidado facial <span class="category-nav__count">5</span></a></li>
+        <li class="category-nav__item"><a class="category-nav__link" href="#mascarillas">Mascarillas y parches <span class="category-nav__count">3</span></a></li>
+        <li class="category-nav__item"><a class="category-nav__link" href="#maquillaje">Labios y maquillaje <span class="category-nav__count">2</span></a></li>
+        <li class="category-nav__item"><a class="category-nav__link" href="#corporal">Cuidado corporal <span class="category-nav__count">2</span></a></li>
+        <li class="category-nav__item"><a class="category-nav__link" href="#capilar">Cuidado capilar <span class="category-nav__count">4</span></a></li>
+        <li class="category-nav__item"><a class="category-nav__link" href="#suplementos">Belleza desde adentro <span class="category-nav__count">2</span></a></li>
+      </ul>
+    </nav>
+
+    <!-- ==================== CATEGORÍA: CUIDADO FACIAL ==================== -->
+    <section class="category" id="facial">
+      <header class="category__header">
+        <h2 class="category__title">Cuidado facial</h2>
+        <p class="category__meta">Sérums, tratamientos y cremas · 5 productos</p>
+      </header>
+      <div class="category__grid">
+        <!-- ===== Producto 1: The Vita-A Retinal Shot Tightening Booster ===== -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <button class="product-card__zoom" type="button" data-lightbox-src="src/celimax-retinal-shot-booster.jpg" data-lightbox-caption="The Vita-A Retinal Shot Tightening Booster" aria-label="Ampliar imagen: The Vita-A Retinal Shot Tightening Booster">
+              <img class="product-card__image" src="src/celimax-retinal-shot-booster.jpg" alt="The Vita-A Retinal Shot Tightening Booster" loading="lazy">
+              <span class="product-card__zoom-hint" aria-hidden="true">Ampliar</span>
+            </button>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">celimax <span class="product-card__origin">· Korea</span></p>
+            <h3 class="product-card__name">The Vita-A Retinal Shot Tightening Booster</h3>
+            <p class="product-card__name-jp" lang="ja">15 ml</p>
+            <div class="product-card__price category-nav__link margin-price">
+              <span class="product-card__price-label">Precio</span>
+              <span class="product-card__price-value">$34.990</span>
+            </div>
+            <dl class="product-card__details">
+              <div class="product-card__detail">
+                <dt class="product-card__label">Activo principal</dt>
+                <dd class="product-card__value">Retinal 0,1 % (liposomado), Matrixyl® 3000 al 3 % y pantenol 1 %</dd>
+              </div>
+              <div class="product-card__detail">
+                <dt class="product-card__label">Para qué se usa</dt>
+                <dd class="product-card__value">Antiedad: líneas de expresión, poros dilatados y firmeza</dd>
+              </div>
+
+            </dl>
+          </div>
+        </article>
+        <!-- ===== Producto 2: Vita 10 Glutathione Brightening Serum ===== -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <button class="product-card__zoom" type="button" data-lightbox-src="src/anua-vita-10-serum.jpg" data-lightbox-caption="Vita 10 Glutathione Brightening Serum" aria-label="Ampliar imagen: Vita 10 Glutathione Brightening Serum">
+              <img class="product-card__image" src="src/anua-vita-10-serum.jpg" alt="Vita 10 Glutathione Brightening Serum" loading="lazy">
+              <span class="product-card__zoom-hint" aria-hidden="true">Ampliar</span>
+            </button>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">Anua <span class="product-card__origin">· Korea</span></p>
+            <h3 class="product-card__name">Vita 10 Glutathione Brightening Serum</h3>
+            <p class="product-card__name-jp" lang="ja">20 ml</p>
+            <div class="product-card__price category-nav__link margin-price">
+              <span class="product-card__price-label">Precio</span>
+              <span class="product-card__price-value">$38.990</span>
+            </div>
+            <dl class="product-card__details">
+              <div class="product-card__detail">
+                <dt class="product-card__label">Activo principal</dt>
+                <dd class="product-card__value">Vitamina C pura (ácido ascórbico) + 3 derivados de vitamina C (10 % en total), con glutatión</dd>
+              </div>
+              <div class="product-card__detail">
+                <dt class="product-card__label">Para qué se usa</dt>
+                <dd class="product-card__value">Luminosidad y tono parejo; opacidad, poros y textura</dd>
+              </div>
+              <div class="product-card__detail product-card__detail--awards">
+                <dt class="product-card__label">Premios y certificaciones</dt>
+                <dd class="product-card__value">
+                <ul class="product-card__awards">
+                  <li class="product-card__awards-item">@cosme Best Cosmetics Awards 2026 (1.er semestre): 1.º Mejor sérum nuevo, 1.º en sérums de precio medio y 3.º general de productos nuevos</li>
+                  <li class="product-card__awards-item">LDK the Beauty (mayo 2026): 1.º lugar y Best Buy en sérums para poros</li>
+                </ul>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+        <!-- ===== Producto 3: Capsule Serum Vitamin C (versión V) ===== -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <button class="product-card__zoom" type="button" data-lightbox-src="src/capsule-serum-vitamin-c.jpg" data-lightbox-caption="Capsule Serum Vitamin C (versión V)" aria-label="Ampliar imagen: Capsule Serum Vitamin C (versión V)">
+              <img class="product-card__image" src="src/capsule-serum-vitamin-c.jpg" alt="Capsule Serum Vitamin C (versión V)" loading="lazy">
+              <span class="product-card__zoom-hint" aria-hidden="true">Ampliar</span>
+            </button>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">Capsule Serum · MD Inc. <span class="product-card__origin">· Japón</span></p>
+            <h3 class="product-card__name">Capsule Serum Vitamin C (versión V)</h3>
+            <p class="product-card__name-jp" lang="ja">30 ml</p>
+            <div class="product-card__price category-nav__link margin-price">
+              <span class="product-card__price-label">Precio</span>
+              <span class="product-card__price-value">$23.990</span>
+            </div>
+            <dl class="product-card__details">
+              <div class="product-card__detail">
+                <dt class="product-card__label">Activo principal</dt>
+                <dd class="product-card__value">Vitamina C pura (ácido ascórbico) + 4 derivados de vitamina C, en cápsulas que se rompen al aplicar</dd>
+              </div>
+              <div class="product-card__detail">
+                <dt class="product-card__label">Para qué se usa</dt>
+                <dd class="product-card__value">Poros, aspereza, opacidad y luminosidad</dd>
+              </div>
+            
+            </dl>
+          </div>
+        </article>
+        <!-- ===== Producto 4: Sofina iP Peeling Mousse Serum ===== -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <button class="product-card__zoom" type="button" data-lightbox-src="src/sofina-ip-peeling-mousse-serum.jpg" data-lightbox-caption="Sofina iP Peeling Mousse Serum" aria-label="Ampliar imagen: Sofina iP Peeling Mousse Serum">
+              <img class="product-card__image" src="src/sofina-ip-peeling-mousse-serum.jpg" alt="Sofina iP Peeling Mousse Serum" loading="lazy">
+              <span class="product-card__zoom-hint" aria-hidden="true">Ampliar</span>
+            </button>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">SOFINA iP · Kao <span class="product-card__origin">· Japón</span></p>
+            <h3 class="product-card__name">Sofina iP Peeling Mousse Serum</h3>
+            <p class="product-card__name-jp" lang="ja">120 g</p>
+            <div class="product-card__price category-nav__link margin-price">
+              <span class="product-card__price-label">Precio</span>
+              <span class="product-card__price-value">$45.990</span>
+            </div>
+            <dl class="product-card__details">
+              <div class="product-card__detail">
+                <dt class="product-card__label">Activo principal</dt>
+                <dd class="product-card__value">Fermento de jugo de pera (Lactobacillus) y extracto de flor de hibisco; espuma con gas carbónico</dd>
+              </div>
+              <div class="product-card__detail">
+                <dt class="product-card__label">Para qué se usa</dt>
+                <dd class="product-card__value">Exfoliación suave: retira células muertas, alisa la textura y aporta luminosidad e hidratación</dd>
+              </div>
+              <div class="product-card__detail product-card__detail--awards">
+                <dt class="product-card__label">Premios y certificaciones</dt>
+                <dd class="product-card__value">
+                <ul class="product-card__awards">
+                  <li class="product-card__awards-item">@cosme Best Cosmetics Awards 2025: 1.º Mejor gommage y peeling</li>
+                  <li class="product-card__awards-item">32 premios en medios de belleza japoneses en 2025, entre ellos 美的GRAND (1.º en cuidado de queratina)</li>
+                </ul>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+        <!-- ===== Producto 5: Collagen Retinol Refining Gua Sha Cream ===== -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <button class="product-card__zoom" type="button" data-lightbox-src="src/anua-collagen-retinol-gua-sha-cream.jpg" data-lightbox-caption="Collagen Retinol Refining Gua Sha Cream" aria-label="Ampliar imagen: Collagen Retinol Refining Gua Sha Cream">
+              <img class="product-card__image" src="src/anua-collagen-retinol-gua-sha-cream.jpg" alt="Collagen Retinol Refining Gua Sha Cream" loading="lazy">
+              <span class="product-card__zoom-hint" aria-hidden="true">Ampliar</span>
+            </button>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">Anua <span class="product-card__origin">· Korea</span></p>
+            <h3 class="product-card__name">Collagen Retinol Refining Gua Sha Cream</h3>
+            <p class="product-card__name-jp" lang="ja">80 ml</p>
+            <div class="product-card__price category-nav__link margin-price">
+              <span class="product-card__price-label">Precio</span>
+              <span class="product-card__price-value">$42.990</span>
+            </div>
+            <dl class="product-card__details">
+              <div class="product-card__detail">
+                <dt class="product-card__label">Activo principal</dt>
+                <dd class="product-card__value">Retinol encapsulado y colágeno hidrolizado, con péptidos y niacinamida</dd>
+              </div>
+              <div class="product-card__detail">
+                <dt class="product-card__label">Para qué se usa</dt>
+                <dd class="product-card__value">Reafirmante: firmeza de mandíbula, cuello y escote; incluye cabezal gua sha para masaje</dd>
+              </div>
+              
+            </dl>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- ==================== CATEGORÍA: MASCARILLAS Y PARCHES ==================== -->
+    <section class="category" id="mascarillas">
+      <header class="category__header">
+        <h2 class="category__title">Mascarillas y parches</h2>
+        <p class="category__meta">Tratamientos en lámina · 3 productos</p>
+      </header>
+      <div class="category__grid">
+        <!-- ===== Producto 6: LuLuLun Hydra PD Mask ===== -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <button class="product-card__zoom" type="button" data-lightbox-src="src/lululun-hydra-pd-mask.jpg" data-lightbox-caption="LuLuLun Hydra PD Mask" aria-label="Ampliar imagen: LuLuLun Hydra PD Mask">
+              <img class="product-card__image" src="src/lululun-hydra-pd-mask.jpg" alt="LuLuLun Hydra PD Mask" loading="lazy">
+              <span class="product-card__zoom-hint" aria-hidden="true">Ampliar</span>
+            </button>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">LuLuLun <span class="product-card__origin">· Japón</span></p>
+            <h3 class="product-card__name">LuLuLun Hydra PD Mask</h3>
+            <div class="product-card__price category-nav__link margin-price">
+              <span class="product-card__price-label">Precio</span>
+              <span class="product-card__price-value">$21.990</span>
+            </div>
+            <dl class="product-card__details">
+              <div class="product-card__detail">
+                <dt class="product-card__label">Activo principal</dt>
+                <dd class="product-card__value">PDRN de 2 tipos (ADN de salmón y de origen vegetal), con niacinamida, vitamina C (VC-IP), pantenol, colágeno y ácido hialurónico</dd>
+              </div>
+              <div class="product-card__detail">
+                <dt class="product-card__label">Para qué se usa</dt>
+                <dd class="product-card__value">Firmeza, hidratación y brillo (piel «glass skin»); uso diario</dd>
+              </div>
+              <div class="product-card__detail product-card__detail--awards">
+                <dt class="product-card__label">Premios y certificaciones</dt>
+                <dd class="product-card__value">
+                <ul class="product-card__awards">
+                  <li class="product-card__awards-item">@cosme Best Cosmetics Awards 2026 (1.er semestre): 1.º Mejor mascarilla de lámina</li>
+                </ul>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+        <!-- ===== Producto 7: Clear Turn Hyaluro Tune Micro Patch 2000+ ===== -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <button class="product-card__zoom" type="button" data-lightbox-src="src/clear-turn-hyaluro-tune-2000.jpg" data-lightbox-caption="Clear Turn Hyaluro Tune Micro Patch 2000+" aria-label="Ampliar imagen: Clear Turn Hyaluro Tune Micro Patch 2000+">
+              <img class="product-card__image" src="src/clear-turn-hyaluro-tune-2000.jpg" alt="Clear Turn Hyaluro Tune Micro Patch 2000+" loading="lazy">
+              <span class="product-card__zoom-hint" aria-hidden="true">Ampliar</span>
+            </button>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">CLEAR TURN · Kosé Cosmeport <span class="product-card__origin">· Japón</span></p>
+            <h3 class="product-card__name">Clear Turn Hyaluro Tune Micro Patch 2000+</h3>
+            <p class="product-card__name-jp" lang="ja">6 parches</p>
+            <div class="product-card__price category-nav__link margin-price">
+              <span class="product-card__price-label">Precio</span>
+              <span class="product-card__price-value">$37.990</span>
+            </div>
+            <dl class="product-card__details">
+              <div class="product-card__detail">
+                <dt class="product-card__label">Activo principal</dt>
+                <dd class="product-card__value">Microagujas de ácido hialurónico (doble), con glutatión, niacinamida y derivado de retinol</dd>
+              </div>
+              <div class="product-card__detail">
+                <dt class="product-card__label">Para qué se usa</dt>
+                <dd class="product-card__value">Hidratación y efecto relleno en contorno de ojos y boca; se aplica de noche</dd>
+              </div>
+   
+            </dl>
+          </div>
+        </article>
+        <!-- ===== Producto 8: Calamee Make Keep Square Pack ===== -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <button class="product-card__zoom" type="button" data-lightbox-src="src/calamee-make-keep-square-pack.jpg" data-lightbox-caption="Calamee Make Keep Square Pack" aria-label="Ampliar imagen: Calamee Make Keep Square Pack">
+              <img class="product-card__image" src="src/calamee-make-keep-square-pack.jpg" alt="Calamee Make Keep Square Pack" loading="lazy">
+              <span class="product-card__zoom-hint" aria-hidden="true">Ampliar</span>
+            </button>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">Calamee · Rohto <span class="product-card__origin">· Japón</span></p>
+            <h3 class="product-card__name">Calamee Make Keep Square Pack</h3>
+            <p class="product-card__name-jp" lang="ja">50 láminas</p>
+            <div class="product-card__price category-nav__link margin-price">
+              <span class="product-card__price-label">Precio</span>
+              <span class="product-card__price-value">$21.990</span>
+            </div>
+            <dl class="product-card__details">
+              <div class="product-card__detail">
+                <dt class="product-card__label">Activo principal</dt>
+                <dd class="product-card__value">Calamina (polvo absorbente de sebo) y 6 ingredientes hidratantes, entre ellos centella asiática y glicirricinato dipotásico</dd>
+              </div>
+              <div class="product-card__detail">
+                <dt class="product-card__label">Para qué se usa</dt>
+                <dd class="product-card__value">Control de brillo: mascarilla de la mañana para que el maquillaje dure más</dd>
+              </div>
+
+            </dl>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- ==================== CATEGORÍA: LABIOS Y MAQUILLAJE ==================== -->
+    <section class="category" id="maquillaje">
+      <header class="category__header">
+        <h2 class="category__title">Labios y maquillaje</h2>
+        <p class="category__meta">Color y herramientas · 2 productos</p>
+      </header>
+      <div class="category__grid">
+        <!-- ===== Producto 9: NIVEA Rich Care &amp; Color Lip · Sheer Red ===== -->
+        <article class="product-card">
+          <div class="product-card__media product-card__media--contain">
+            <button class="product-card__zoom" type="button" data-lightbox-src="src/nivea-rich-care-color-sheer-red.jpg" data-lightbox-caption="NIVEA Rich Care &amp; Color Lip · Sheer Red" aria-label="Ampliar imagen: NIVEA Rich Care &amp; Color Lip · Sheer Red">
+              <img class="product-card__image" src="src/nivea-rich-care-color-sheer-red.jpg" alt="NIVEA Rich Care &amp; Color Lip · Sheer Red" loading="lazy">
+              <span class="product-card__zoom-hint" aria-hidden="true">Ampliar</span>
+            </button>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">NIVEA · Kao <span class="product-card__origin">· Japón (edición japonesa)</span></p>
+            <h3 class="product-card__name">NIVEA Rich Care &amp; Color Lip · Sheer Red</h3>
+            <p class="product-card__name-jp" lang="ja">2 g</p>
+            <div class="product-card__price category-nav__link margin-price">
+              <span class="product-card__price-label">Precio</span>
+              <span class="product-card__price-value">$19.990</span>
+            </div>
+            <dl class="product-card__details">
+              <div class="product-card__detail">
+                <dt class="product-card__label">Activo principal</dt>
+                <dd class="product-card__value">Aceites de macadamia, palta y jojoba; filtros UV SPF 20 / PA++</dd>
+              </div>
+              <div class="product-card__detail">
+                <dt class="product-card__label">Para qué se usa</dt>
+                <dd class="product-card__value">Bálsamo labial con color: hidrata, da color translúcido y protege del sol</dd>
+              </div>
+              <div class="product-card__detail product-card__detail--awards">
+                <dt class="product-card__label">Premios y certificaciones</dt>
+                <dd class="product-card__value">
+                <ul class="product-card__awards">
+                  <li class="product-card__awards-item">@cosme Best Cosmetics Awards 2020: 2.º Mejor cuidado de labios</li>
+                </ul>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+        <!-- ===== Producto 10: Shiseido Eyelash Curler «Takumi no Waza» ===== -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <button class="product-card__zoom" type="button" data-lightbox-src="src/shiseido-eyelash-curler.jpg" data-lightbox-caption="Shiseido Eyelash Curler «Takumi no Waza»" aria-label="Ampliar imagen: Shiseido Eyelash Curler «Takumi no Waza»">
+              <img class="product-card__image" src="src/shiseido-eyelash-curler.jpg" alt="Shiseido Eyelash Curler «Takumi no Waza»" loading="lazy">
+              <span class="product-card__zoom-hint" aria-hidden="true">Ampliar</span>
+            </button>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">Shiseido <span class="product-card__origin">· Japón (hecho en Japón)</span></p>
+            <h3 class="product-card__name">Shiseido Eyelash Curler «Takumi no Waza»</h3>
+            <p class="product-card__name-jp" lang="ja">Trae 1 goma de repuesto</p>
+            <div class="product-card__price category-nav__link margin-price">
+              <span class="product-card__price-label">Precio</span>
+              <span class="product-card__price-value">$25.990</span>
+            </div>
+            <dl class="product-card__details">
+              <div class="product-card__detail">
+                <dt class="product-card__label">Activo principal</dt>
+                <dd class="product-card__value">No aplica (herramienta)</dd>
+              </div>
+              <div class="product-card__detail">
+                <dt class="product-card__label">Para qué se usa</dt>
+                <dd class="product-card__value">Rizar las pestañas desde la raíz; curva diseñada para la forma del párpado japonés</dd>
+              </div>
+              <div class="product-card__detail product-card__detail--awards">
+                <dt class="product-card__label">Premios y certificaciones</dt>
+                <dd class="product-card__value">
+                <ul class="product-card__awards">
+                  <li class="product-card__awards-item">@cosme Hall of Fame (殿堂入り) 2005</li>
+                  <li class="product-card__awards-item">@cosme: 1.º en accesorios de maquillaje 2002, 2003 y 2004; 1.º en rizadores 2000</li>
+                </ul>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- ==================== CATEGORÍA: CUIDADO CORPORAL ==================== -->
+    <section class="category" id="corporal">
+      <header class="category__header">
+        <h2 class="category__title">Cuidado corporal</h2>
+        <p class="category__meta">Jabones exfoliantes · 2 productos</p>
+      </header>
+      <div class="category__grid">
+        <!-- ===== Producto 11: Koisuru Oshiri · Hip Care Soap ===== -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <button class="product-card__zoom" type="button" data-lightbox-src="src/pelican-koisuru-oshiri-soap.jpg" data-lightbox-caption="Koisuru Oshiri · Hip Care Soap" aria-label="Ampliar imagen: Koisuru Oshiri · Hip Care Soap">
+              <img class="product-card__image" src="src/pelican-koisuru-oshiri-soap.jpg" alt="Koisuru Oshiri · Hip Care Soap" loading="lazy">
+              <span class="product-card__zoom-hint" aria-hidden="true">Ampliar</span>
+            </button>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">Pelican Soap <span class="product-card__origin">· Japón</span></p>
+            <h3 class="product-card__name">Koisuru Oshiri · Hip Care Soap</h3>
+            <p class="product-card__name-jp" lang="ja">80 g</p>
+            <div class="product-card__price category-nav__link margin-price">
+              <span class="product-card__price-label">Precio</span>
+              <span class="product-card__price-value">$17.990</span>
+            </div>
+            <dl class="product-card__details">
+              <div class="product-card__detail">
+                <dt class="product-card__label">Activo principal</dt>
+                <dd class="product-card__value">Exfoliantes: polvo de hueso de durazno y manano de konjac; con miel de rosa fermentada y ácidos de frutas</dd>
+              </div>
+              <div class="product-card__detail">
+                <dt class="product-card__label">Para qué se usa</dt>
+                <dd class="product-card__value">Exfoliante para glúteos: asperezas, oscurecimiento y granitos causados por células muertas</dd>
+              </div>
+              <div class="product-card__detail product-card__detail--awards">
+                <dt class="product-card__label">Premios y certificaciones</dt>
+                <dd class="product-card__value">
+                <ul class="product-card__awards">
+                  <li class="product-card__awards-item">@cosme Best Cosmetics Awards 2022: 1.º Mejor cuidado corporal</li>
+                  <li class="product-card__awards-item">@cosme: 2.º en 2020 y 3.º en 2021 (cuidado corporal); 3.º jabón corporal 2019</li>
+                </ul>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+        <!-- ===== Producto 12: Deitanseki Body Scrub Soap ===== -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <button class="product-card__zoom" type="button" data-lightbox-src="src/pelican-deitanseki-body-scrub.jpg" data-lightbox-caption="Deitanseki Body Scrub Soap" aria-label="Ampliar imagen: Deitanseki Body Scrub Soap">
+              <img class="product-card__image" src="src/pelican-deitanseki-body-scrub.jpg" alt="Deitanseki Body Scrub Soap" loading="lazy">
+              <span class="product-card__zoom-hint" aria-hidden="true">Ampliar</span>
+            </button>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">Pelican Soap <span class="product-card__origin">· Japón</span></p>
+            <h3 class="product-card__name">Deitanseki Body Scrub Soap</h3>
+            <p class="product-card__name-jp" lang="ja">100 g</p>
+            <div class="product-card__price category-nav__link margin-price">
+              <span class="product-card__price-label">Precio</span>
+              <span class="product-card__price-value">$17.990</span>
+            </div>
+            <dl class="product-card__details">
+              <div class="product-card__detail">
+                <dt class="product-card__label">Activo principal</dt>
+                <dd class="product-card__value">Barro (bentonita), carbón en polvo, konjac y bambú como exfoliantes</dd>
+              </div>
+              <div class="product-card__detail">
+                <dt class="product-card__label">Para qué se usa</dt>
+                <dd class="product-card__value">Limpieza de zonas oscurecidas: axilas, codos, rodillas, glúteos y talones</dd>
+              </div>
+    
+            </dl>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- ==================== CATEGORÍA: CUIDADO CAPILAR ==================== -->
+    <section class="category" id="capilar">
+      <header class="category__header">
+        <h2 class="category__title">Cuidado capilar</h2>
+        <p class="category__meta">Tratamientos y accesorios · 4 productos</p>
+      </header>
+      <div class="category__grid">
+        <!-- ===== Producto 13: fino Premium Touch Hair Mask ===== -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <button class="product-card__zoom" type="button" data-lightbox-src="src/fino-premium-touch-hair-mask.jpg" data-lightbox-caption="fino Premium Touch Hair Mask" aria-label="Ampliar imagen: fino Premium Touch Hair Mask">
+              <img class="product-card__image" src="src/fino-premium-touch-hair-mask.jpg" alt="fino Premium Touch Hair Mask" loading="lazy">
+              <span class="product-card__zoom-hint" aria-hidden="true">Ampliar</span>
+            </button>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">fino · Fine Today (ex Shiseido) <span class="product-card__origin">· Japón</span></p>
+            <h3 class="product-card__name">fino Premium Touch Hair Mask</h3>
+            <p class="product-card__name-jp" lang="ja">フィーノ プレミアムタッチ 濃厚美容液ヘアマスク · 230 g</p>
+            <div class="product-card__price category-nav__link margin-price">
+              <span class="product-card__price-label">Precio</span>
+              <span class="product-card__price-value">$27.990</span>
+            </div>
+            <dl class="product-card__details">
+              <div class="product-card__detail">
+                <dt class="product-card__label">Activo principal</dt>
+                <dd class="product-card__value">6 ingredientes de tratamiento, entre ellos escualano, extracto de jalea real y conquiolina hidrolizada</dd>
+              </div>
+              <div class="product-card__detail">
+                <dt class="product-card__label">Para qué se usa</dt>
+                <dd class="product-card__value">Reparación del cabello dañado: suavidad y brillo; se enjuaga</dd>
+              </div>
+              <div class="product-card__detail product-card__detail--awards">
+                <dt class="product-card__label">Premios y certificaciones</dt>
+                <dd class="product-card__value">
+                <ul class="product-card__awards">
+                  <li class="product-card__awards-item">@cosme Hall of Fame (殿堂入り) 2009</li>
+                  <li class="product-card__awards-item">@cosme: 1.º en cuidado capilar 2007 y 2008</li>
+                </ul>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+        <!-- ===== Producto 14: THE ANSWER Complete Lamellar Milk ===== -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <button class="product-card__zoom" type="button" data-lightbox-src="src/the-answer-lamellar-milk.jpg" data-lightbox-caption="THE ANSWER Complete Lamellar Milk" aria-label="Ampliar imagen: THE ANSWER Complete Lamellar Milk">
+              <img class="product-card__image" src="src/the-answer-lamellar-milk.jpg" alt="THE ANSWER Complete Lamellar Milk" loading="lazy">
+              <span class="product-card__zoom-hint" aria-hidden="true">Ampliar</span>
+            </button>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">THE ANSWER · Kao <span class="product-card__origin">· Japón</span></p>
+            <h3 class="product-card__name">THE ANSWER Complete Lamellar Milk</h3>
+            <p class="product-card__name-jp" lang="ja">70 g</p>
+            <div class="product-card__price category-nav__link margin-price">
+              <span class="product-card__price-label">Precio</span>
+              <span class="product-card__price-value">$27.990</span>
+            </div>
+            <dl class="product-card__details">
+              <div class="product-card__detail">
+                <dt class="product-card__label">Activo principal</dt>
+                <dd class="product-card__value">14 ingredientes reparadores; destacan queratina hidrolizada, ceramida α (desarrollada por Kao), ácido málico, ácido de lanolina y glicérido de ácido graso</dd>
+              </div>
+              <div class="product-card__detail">
+                <dt class="product-card__label">Para qué se usa</dt>
+                <dd class="product-card__value">Leche capilar sin enjuague: hidratación, suavidad, brillo y control del frizz</dd>
+              </div>
+              <div class="product-card__detail product-card__detail--awards">
+                <dt class="product-card__label">Premios y certificaciones</dt>
+                <dd class="product-card__value">
+                <ul class="product-card__awards">
+                  <li class="product-card__awards-item">@cosme Best Cosmetics Awards 2026 (1.er semestre): 1.º Mejor cuidado capilar nuevo</li>
+                  <li class="product-card__awards-item">1.º en cuidado capilar sin enjuague en los rankings anuales de VOCE y MAQUIA, entre otras revistas</li>
+                </ul>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+        <!-- ===== Producto 15: ReFa Heart Comb Aira · serie M ===== -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <button class="product-card__zoom" type="button" data-lightbox-src="src/refa-heart-comb-aira.jpg" data-lightbox-caption="ReFa Heart Comb Aira · serie M" aria-label="Ampliar imagen: ReFa Heart Comb Aira · serie M">
+              <img class="product-card__image" src="src/refa-heart-comb-aira.jpg" alt="ReFa Heart Comb Aira · serie M" loading="lazy">
+              <span class="product-card__zoom-hint" aria-hidden="true">Ampliar</span>
+            </button>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">ReFa · MTG <span class="product-card__origin">· Japón (marca)</span></p>
+            <h3 class="product-card__name">ReFa Heart Comb Aira · serie M</h3>
+            <p class="product-card__name-jp" lang="ja">Distintos colores disponibles</p>
+            <div class="product-card__price category-nav__link margin-price">
+              <span class="product-card__price-label">Precio</span>
+              <span class="product-card__price-value">$37.990</span>
+            </div>
+            <dl class="product-card__details">
+              <div class="product-card__detail">
+                <dt class="product-card__label">Activo principal</dt>
+                <dd class="product-card__value">No aplica (herramienta)</dd>
+              </div>
+              <div class="product-card__detail">
+                <dt class="product-card__label">Para qué se usa</dt>
+                <dd class="product-card__value">Peinar y fijar flequillo y cabello del rostro; cromado para reducir la estática, plegable</dd>
+              </div>
+
+            </dl>
+          </div>
+        </article>
+        <!-- ===== Producto 16: Ribbon Cherry Glass Hair Brush ===== -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <button class="product-card__zoom" type="button" data-lightbox-src="src/medicube-ribbon-cherry-brush.jpg" data-lightbox-caption="Ribbon Cherry Glass Hair Brush" aria-label="Ampliar imagen: Ribbon Cherry Glass Hair Brush">
+              <img class="product-card__image" src="src/medicube-ribbon-cherry-brush.jpg" alt="Ribbon Cherry Glass Hair Brush" loading="lazy">
+              <span class="product-card__zoom-hint" aria-hidden="true">Ampliar</span>
+            </button>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">medicube × FOREVER:CHERRY <span class="product-card__origin">· Korea</span></p>
+            <h3 class="product-card__name">Ribbon Cherry Glass Hair Brush</h3>
+            <div class="product-card__price category-nav__link margin-price">
+              <span class="product-card__price-label">Precio</span>
+              <span class="product-card__price-value">$33.990</span>
+            </div>
+            <dl class="product-card__details">
+              <div class="product-card__detail">
+                <dt class="product-card__label">Activo principal</dt>
+                <dd class="product-card__value">No aplica (herramienta)</dd>
+              </div>
+              <div class="product-card__detail">
+                <dt class="product-card__label">Para qué se usa</dt>
+                <dd class="product-card__value">Desenredar y dar brillo; cerdas en 4 capas, con tapa para llevar</dd>
+              </div>
+    
+            </dl>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- ==================== CATEGORÍA: BELLEZA DESDE ADENTRO ==================== -->
+    <section class="category" id="suplementos">
+      <header class="category__header">
+        <h2 class="category__title">Belleza desde adentro</h2>
+        <p class="category__meta">Suplementos en gelatina · 2 productos</p>
+      </header>
+      <div class="category__grid">
+        <!-- ===== Producto 17: FANCL Deep Charge Collagen · Jalea de uva ===== -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <button class="product-card__zoom" type="button" data-lightbox-src="src/fancl-deep-charge-collagen.jpg" data-lightbox-caption="FANCL Deep Charge Collagen · Jalea de uva" aria-label="Ampliar imagen: FANCL Deep Charge Collagen · Jalea de uva">
+              <img class="product-card__image" src="src/fancl-deep-charge-collagen.jpg" alt="FANCL Deep Charge Collagen · Jalea de uva" loading="lazy">
+              <span class="product-card__zoom-hint" aria-hidden="true">Ampliar</span>
+            </button>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">FANCL <span class="product-card__origin">· Japón</span></p>
+            <h3 class="product-card__name">FANCL Deep Charge Collagen · Jalea de uva</h3>
+            <p class="product-card__name-jp" lang="ja">10 sachets</p>
+            <div class="product-card__price category-nav__link margin-price">
+              <span class="product-card__price-label">Precio</span>
+              <span class="product-card__price-value">$21.990</span>
+            </div>
+            <dl class="product-card__details">
+              <div class="product-card__detail">
+                <dt class="product-card__label">Activo principal</dt>
+                <dd class="product-card__value">Péptido de colágeno 3.000 mg por porción, con extracto de rosa mosqueta y ácido hialurónico</dd>
+              </div>
+              <div class="product-card__detail">
+                <dt class="product-card__label">Para qué se usa</dt>
+                <dd class="product-card__value">Mantener la hidratación y elasticidad de la piel (alimento con declaración funcional en Japón, n.º G778)</dd>
+              </div>
+              <div class="product-card__detail product-card__detail--awards">
+                <dt class="product-card__label">Premios y certificaciones</dt>
+                <dd class="product-card__value">
+                <ul class="product-card__awards">
+                  <li class="product-card__awards-item">Alimento con declaración funcional en Japón (機能性表示食品), registro n.º G778</li>
+                </ul>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+        <!-- ===== Producto 18: FOODOLOGY Coleology Cut Jelly ===== -->
+        <article class="product-card">
+          <div class="product-card__media">
+            <button class="product-card__zoom" type="button" data-lightbox-src="src/foodology-coleology-cut-jelly.jpg" data-lightbox-caption="FOODOLOGY Coleology Cut Jelly" aria-label="Ampliar imagen: FOODOLOGY Coleology Cut Jelly">
+              <img class="product-card__image" src="src/foodology-coleology-cut-jelly.jpg" alt="FOODOLOGY Coleology Cut Jelly" loading="lazy">
+              <span class="product-card__zoom-hint" aria-hidden="true">Ampliar</span>
+            </button>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">FOODOLOGY <span class="product-card__origin">· Korea (fabricación)</span></p>
+            <h3 class="product-card__name">FOODOLOGY Coleology Cut Jelly</h3>
+            <p class="product-card__name-jp" lang="ja">250 g (10 × 25 g)</p>
+            <div class="product-card__price category-nav__link margin-price">
+              <span class="product-card__price-label">Precio</span>
+              <span class="product-card__price-value">$24.990</span>
+            </div>
+            <dl class="product-card__details">
+              <div class="product-card__detail">
+                <dt class="product-card__label">Activo principal</dt>
+                <dd class="product-card__value">Garcinia cambogia y dextrina resistente, con semillas de chía</dd>
+              </div>
+              <div class="product-card__detail">
+                <dt class="product-card__label">Para qué se usa</dt>
+                <dd class="product-card__value">Apoyo para dietas después de las comidas; sabor granada</dd>
+              </div>
+  
+            </dl>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== PIE DE PÁGINA ==================== -->
+    <footer class="page-footer">
+      <p class="page-footer__text">Los usos corresponden a lo que declara cada fabricante; no son indicaciones médicas.</p>
+      <a href="https://www.heyjapan.cl">www.heyjapan.cl</a>
+    </footer>
+
+  </div>
+
+  <!-- ==================== VISOR DE IMÁGENES (LIGHTBOX) ==================== -->
+  <dialog class="lightbox" id="lightbox" aria-label="Vista ampliada del producto">
+    <div class="lightbox__content">
+      <button class="lightbox__close" id="lightbox-close" type="button" aria-label="Cerrar">&times;</button>
+      <img class="lightbox__image" id="lightbox-image" src="" alt="">
+      <p class="lightbox__caption" id="lightbox-caption"></p>
+    </div>
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
