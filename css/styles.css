@@ -210,10 +210,6 @@ img {
   border-bottom: 1px solid var(--color-border);
 }
 
-.margin-price {
-  margin-bottom: 12px !important;
-}
-
 /* Botón hamburguesa: oculto en computador */
 .category-nav__toggle {
   display: none;
@@ -417,10 +413,15 @@ img {
 
 /* Precio */
 .product-card__price {
-  margin: 2px 0 0;
+  margin: 2px 0 12px;
   display: flex;
-  align-items: baseline;
-  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
 }
 
 .product-card__price-label {
